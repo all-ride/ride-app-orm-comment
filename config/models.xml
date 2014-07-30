@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models>
+    <model name="Comment" modelClass="ride\application\orm\model\CommentModel">
+        <field name="name" type="string">
+            <option name="scaffold.order" value="true" />
+            <option name="scaffold.search" value="true" />
+            <option name="label.name" value="label.name"/>
+
+            <validation name="required" />
+        </field>
+        <field name="email" type="email">
+            <option name="label.name" value="label.email"/>
+        </field>
+        <field name="body" type="text">
+            <option name="label.name" value="label.comment"/>
+
+            <validation name="required"/>
+        </field>
+        <field name="isApproved" type="boolean">
+            <option name="label.name" value="label.approved"/>
+        </field>
+        <field name="type" type="string">
+            <option name="scaffold.order" value="true" />
+            <option name="scaffold.search" value="true" />
+
+            <validation name="required" />
+        </field>
+        <field name="entry" type="string">
+            <validation name="required" />
+        </field>
+        <field name="user" type="string">
+            <option name="label.name" value="label.user"/>
+        </field>
+        <field name="client" type="string">
+            <option name="label.name" value="label.client"/>
+        </field>
+        <field name="locale" type="string">
+            <option name="label.name" value="label.locale"/>
+        </field>
+
+        <format name="title">{name}</format>
+        <format name="teaser">{dateAdded|date}: {body|striptags|truncate}</format>
+
+        <option name="behaviour.date" value="true"/>
+        <option name="behaviour.log" value="true"/>
+        <option name="order.direction" value="DESC"/>
+        <option name="order.field" value="dateAdded"/>
+        <option name="scaffold.expose" value="true"/>
+        <option name="scaffold.title" value="title.comments"/>
+    </model>
+</models>
