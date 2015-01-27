@@ -45,6 +45,7 @@
         <option name="behaviour.log" value="true"/>
         <option name="order.direction" value="DESC"/>
         <option name="order.field" value="dateAdded"/>
+        <option name="rest.expose" value="1"/>
         <option name="scaffold.expose" value="true"/>
         <option name="scaffold.title" value="title.comments"/>
     </model>
